@@ -1,0 +1,29 @@
+.main-footer {
+    color: white;
+    background-color: #5f5f63;
+    padding-top: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+.list-unstyled {
+    font-size: small;
+}
+
+h3 {
+    text-shadow: 4px 4px 8px black;
+}
+
+.col {
+    /*border: 1px solid red; */
+    height: 150px;
+    float: left;
+    width: 45%;
+  }
+.col1 {
+    /*border: 1px dotted blue; */
+    height: 150px;
+    float: right;
+    width: 35%;
+  }
