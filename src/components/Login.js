@@ -4,91 +4,114 @@ import TextField from '@mui/material/TextField';
 import { Paper } from '@mui/material';
 import bgg from './logoo.png';
 import styles from './login.css';
+import { useState } from 'react';
+
+const LoginPage = () => {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [loggedIn, setLoggedIn] = useState(false);
+
+    const handleUsernameChange = (event) => {
+        setUsername(event.target.value);
+    };
+
+    const handlePasswordChange = (event) => {
+        setPassword(event.target.value);
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        // Perform login validation here (e.g., calling an API)
+
+        // Simulating login success
+        setLoggedIn(true);
+    };
+
+    if (loggedIn) {
+        return <h1 > Welcome, { username }! < /h1>;
+    }
+
+
+    return ( < div > {
+            /*
+
+                  <h1>Login Page</h1>
+                  <form onSubmit={handleSubmit}>
+                    <label>
+                      Username:
+                      <input type="text" value={username} onChange={handleUsernameChange} />
+                    </label>
+                    <br />
+                    <label>
+                      Password:
+                      <input type="password" value={password} onChange={handlePasswordChange} />
+                    </label>
+                    <br />
+                    <button type="submit">Log In</button>
+                  </form>
+                  */
+        }
 
 
 
-export default function Login() {
-  
-    const[login,setlogin]=React.useState('')
-    const[password,setpassword]=React.useState('')
+        <
+        div >
 
-const handleClick=(e)=>{
-    const Login={login,password}
-    console.log(Login)
-    fetch("http://localhost:8081/admin/login",{
-    method:"POST",
-    headers:{"Content-Type":"application/json"},
-    body:JSON.stringify(Login)
-}).then(()=>{
-    console.log("login Successefully")
-})
-}
+        <
+        div class = "login-box" >
+        <
+        h2 > Login < /h2>  <
+        form onSubmit = { handleSubmit } >
+        <
+        div class = "user-box" >
+        <
+        input type = "text"
+        name = ""
+        required = ""
+        value = { username }
+        onChange = { handleUsernameChange }
+        /> <
+        label > Username < /label> </div > <
+        div class = "user-box" >
+        <
+        input type = "password"
+        name = ""
+        required = ""
+        value = { password }
+        onChange = { handlePasswordChange }
+        /> <
+        label > Password < /label> </div >
 
-const paperStyle = {
-  opacity:'0.7',  
-  width: '24%',
-  height:'510px',
-  padding: 40,
-  margin:'120px 0px 0px 470px',
-  backgroundColor: '#867983',
-  boxShadow: '0 0 10px #ccc',
-  borderRadius: '40px',
-  
+        <
+        a href = "#" >
+        <
+        span > < /span>  <
+        span > < /span>  <
+        span > < /span>  <
+        span > < /span> <
+        button class = "butsub"
+        type = "submit" >
+        Submit < /button> </a >
+
+        <
+        /form> 
+
+        <
+        /div>
 
 
+
+
+
+
+
+
+
+
+        <
+        /div> </div >
+    );
 };
-  return (
-    <div style={styles}>
-    <Box 
-    
 
-      component="Login"
-    >
-       
-        
-        <Paper elevation={4} style={paperStyle} >
-        
-      <img src ={bgg} width="200" height="140" alt='sami'style={{margin:'10px 10px 10px 110px'}}   />
-  
-        
-            <h1 style={{color: "White",opacity:'1',margin:'10px 10px 50px 180px'}} >Login</h1>
-         <div  > 
-         <TextField id="outlined-basic" label="Login" variant="outlined"
-         value={login}
-         style={{ margin: '10px 10px 10px 120px' }}
-         onChange={(e)=>setlogin(e.target.value)}
-         
-         />  </div> 
-         <div align="center"  style={{}}>
-          <div><br></br></div>
-         <TextField id="outlined-basic" label="password" type="password" variant="outlined"  margin='dense'  size='Normal'
-         value={password}
-         onChange={(e)=>setpassword(e.target.value)}
-         /> </div>
-
-<div><br></br></div>
-      
-         
-
-<div></div>    
-
-          
-        <div> <button style={{padding:"10px",opacity:"0.9",background:"cyan",color:"black",width:"10vw",borderRadius: '10px',margin:'10px 0px 100px 135px' }} onClick={handleClick}>Login</button></div>
-        <div><br></br></div>
-        <div><br></br></div>
-        
-    
-     
-    
-
-  
-</Paper>
-
-
-
-    </Box>
-    </div>
-  );
-}
-
-
+export default LoginPage;

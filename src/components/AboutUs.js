@@ -2,14 +2,21 @@ import * as React from 'react';
 import styles from './AboutUs.css';
 
 const AboutUs = () => {
-  return (
-    <div className="about-us-container">
-      <h1 className="about-us-heading">About Us</h1>
-      <p className="about-us-text">Welcome to our website! We are a team of developers who are passionate about creating high-quality software solutions for our clients.</p>
-      <p className="about-us-text">Our mission is to provide our customers with the best possible service and support.</p>
-      <p className="about-us-text">Thank you for choosing our company. We look forward to work with you!</p>
-    </div>
-  );
+    return ( <
+        div className = "about-us-container" >
+        <
+        h1 className = "about-us-heading" > About Us < /h1> <
+        p className = "about-us-text" > < /p> <
+        p className = "about-us-text" > WELCOME TO OUR SCHOOL BUS WEBSITE!WE ARE A TRUSTED PROVIDER OF SAFE AND RELIABLE TRANSPORTATION SERVICES FOR STUDENTS IN OUR COMMUNITY.WITH A DEEP UNDERSTANDING OF THE IMPORTANCE OF ENSURING A SECURE AND COMFORTABLE JOURNEY TO AND FROM SCHOOL, < /p> <
+        p className = "about-us-text" > WITH A DEEP UNDERSTANDING OF THE IMPORTANCE OF ENSURING A SECURE AND COMFORTABLE JOURNEY TO AND FROM SCHOOL, WE HAVE BUILT A REPUTATION FOR EXCELLENCE IN THE INDUSTRY. < /p> <
+        p className = "about-us-text" > OUR FLEET OF WELL - MAINTAINED BUSES IS EQUIPPED WITH THE LATEST SAFETY FEATURES AND OPERATED BY HIGHLY TRAINED AND EXPERIENCED DRIVERS WHO PRIORITIZE THE WELL - BEING OF OUR PASSENGERS. < /p> <
+        p className = "about-us-text" > WE BELIEVE THAT TRANSPORTATION IS AN INTEGRAL PART OF A CHILD 'S EDUCATIONAL EXPERIENCE, AND WE ARE DEDICATED TO FOSTERING A POSITIVE ENVIRONMENT WHERE STUDENTS FEEL SAFE AND SUPPORTED. </p> <
+        p className = "about-us-text" > OUR COMMITMENT EXTENDS BEYOND TRANSPORTATION; WE ALSO STRIVE TO CULTIVATE A SENSE OF COMMUNITY AND PROMOTE A FRIENDLY AND INCLUSIVE ATMOSPHERE ONBOARD OUR BUSES.PARTNER WITH US FOR A SEAMLESS AND STRESS - FREE SCHOOL TRANSPORTATION EXPERIENCE.WE LOOK FORWARD TO SERVING YOU AND YOUR FAMILY. < /p> <
+        p className = "about-us-text" > < /p>
+
+        <
+        /div>
+    );
 };
 
 export default AboutUs;
